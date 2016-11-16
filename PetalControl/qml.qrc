@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>PetalControl.qml</file>
+    </qresource>
+</RCC>
