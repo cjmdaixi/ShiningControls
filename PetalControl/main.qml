@@ -5,73 +5,75 @@ Window {
     visible: true
     width: 960
     height: 600
-    title: qsTr("Hello World")
-/*
-    Canvas{
-        anchors.fill: parent
-        antialiasing: true
-        renderTarget: Canvas.Image
-        onPaint: {
-            var ctx = getContext("2d");
-            ctx.clearRect(0, 0, width, height);
-            ctx.beginPath();
-            ctx.moveTo(parent.width/2, parent.height/2);
-            ctx.arc(parent.width/2, parent.height/2, 100, 0, Math.PI / 2, true);
-            //ctx.rotate(Math.PI / 4);
-            //ctx.arc(parent.width/2, parent.height/2, 100, 0, Math.PI / 2, true);
-            ctx.closePath();
+    title: qsTr("PetalControl Demo")
 
-
-
-            ctx.lineWidth = 4;
-            ctx.strokeStyle = "red";
-            ctx.stroke();
-        }
-    }
-
-*/
     PetalControl{
         //anchors.fill: parent
+        id: petalControl
+        focus: true
+        Keys.onPressed: {
+            console.log("key pressed");
+            if(petalControl.isStepsFinished)
+                petalControl.resetSteps();
+            else
+                petalControl.nextStep();
+        }
         width: 400
         height: 400
         anchors.centerIn: parent
-
+        stepMode: true
+        onStepsFinished: {
+            console.log("finished!")
+        }
         model: ListModel{
             ListElement{
-                icon: "qrc:/icons/front.png"
+                icon: "qrc:/icons/action_account_circle.svg"
                 info: "Step1 wow"
-                color: "#FF2468"
+                backColor: "#FF2468"
+                contentColor: "white"
             }
             ListElement{
-                icon: "qrc:/icons/bottom.png"
+                icon: "qrc:/icons/action_autorenew.svg"
                 info: "Step2 wow"
-                color: "#E0D4B1"
+                backColor: "#E0D4B1"
+                contentColor: "white"
             }
             ListElement{
-                icon: "qrc:/icons/right.png"
+                icon: "qrc:/icons/file_file_download.svg"
                 info: "Step3 wow"
-                color: "#00A5A6"
+                backColor: "#00A5A6"
+                contentColor: "white"
             }
             ListElement{
-                icon: "qrc:/icons/left.png"
+                icon: "qrc:/icons/alert_warning.svg"
                 info: "Step4 wow"
-                color: "#005B63"
+                backColor: "#005B63"
+                contentColor: "white"
             }
             ListElement{
-                icon: "qrc:/icons/left.png"
+                icon: "qrc:/icons/device_access_alarm.svg"
                 info: "Step5 wow"
-                color: "#3F1103"
+                backColor: "#3F1103"
+                contentColor: "white"
             }
             ListElement{
-                icon: "qrc:/icons/left.png"
-                info: "Step5 wow"
-                color: "#ff1103"
+                icon: "qrc:/icons/image_color_lens.svg"
+                info: "Step6 wow"
+                backColor: "#ff1103"
+                contentColor: "white"
             }
             ListElement{
-                icon: "qrc:/icons/left.png"
-                info: "Step5 wow"
-                color: "#ffff03"
+                icon: "qrc:/icons/image_edit.svg"
+                info: "Step7 wow"
+                backColor: "#ffff03"
+                contentColor: "white"
             }
+            ListElement{
+                icon: "qrc:/icons/social_share.svg"
+                info: "Step8 wow"
+                backColor: "#00ff03"
+                contentColor: "white"
+            }/**/
         }
     }
 }

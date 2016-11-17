@@ -2,5 +2,22 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>PetalControl.qml</file>
+        <file>icons/action_account_circle.svg</file>
+        <file>icons/action_autorenew.svg</file>
+        <file>icons/action_delete.svg</file>
+        <file>icons/action_language.svg</file>
+        <file>icons/action_settings.svg</file>
+        <file>icons/alert_warning.svg</file>
+        <file>icons/communication_email.svg</file>
+        <file>icons/content_add.svg</file>
+        <file>icons/content_create.svg</file>
+        <file>icons/content_forward.svg</file>
+        <file>icons/device_access_alarm.svg</file>
+        <file>icons/file_file_download.svg</file>
+        <file>icons/image_color_lens.svg</file>
+        <file>icons/image_edit.svg</file>
+        <file>icons/maps_place.svg</file>
+        <file>icons/navigation_arrow_drop_down.svg</file>
+        <file>icons/social_share.svg</file>
     </qresource>
 </RCC>
